@@ -5676,16 +5676,6 @@ TEST_CASE_METHOD(Fixture, "C++23: is_null with std::expected",
   }
 }
 
-namespace {
-
-using expected_string = std::expected<std::string, int>;
-
-struct mock_with_expected_as_func_param {
-  MAKE_MOCK(Foo, auto(const expected_string &)->void);
-};
-
-} // namespace
-
 #endif
 
 #endif /* TROMPELOEIL_CPLUSPLUS > 201103L */
